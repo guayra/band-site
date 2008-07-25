@@ -1,0 +1,106 @@
+body {
+	background-color: #000;
+	color: #fff;
+	font-size: 10px;
+	font-family: verdana, arial, helvetica, sans-serif;;
+	margin: 0px;
+}
+
+a { color: #999; text-decoration: none; }
+a:visited { color: #999; }
+a:hover { text-decoration: underline; }
+
+.row0{ background-color: #333;}
+.row1{ background-color: #000;}
+
+.flyer{
+	width: 250px;
+}
+
+.noticia_image{
+	max-width: 70%;
+}
+
+.success{
+	margin: 5px auto 5px auto;
+	width:70%;
+	color: #fff;
+	background-color: #393;
+	border: 2px solid #0d0;
+	text-align:center;
+}
+
+.notice{
+	margin: 5px auto 5px auto;
+	width:70%;
+	color: #fff;
+	border: 2px solid #0000ee;
+	background-color: #000096;
+	text-align:center;
+}
+
+.error{
+	margin: 5px auto 5px auto;
+	width:70%;
+	color: #fee;
+	background-color: #900;
+	border: 2px solid #c00;
+	text-align:center;
+}
+
+.fieldWithErrors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+#errorExplanation {
+  width: 400px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+#errorExplanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  background-color: #c00;
+  color: #fff;
+}
+
+#errorExplanation p {
+  color: #333;
+  margin-bottom: 0;
+  padding: 5px;
+}
+
+#errorExplanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+
+div.uploadStatus {
+  margin: 5px;
+}
+
+div.progressBar {
+  margin: 5px;
+}
+
+div.progressBar div.border {
+  background-color: #fff;
+  border: 1px solid gray;
+  width: 100%;
+}
+
+div.progressBar div.background {
+  background-color: #333;
+  height: 18px;
+  width: 0%;
+}
+

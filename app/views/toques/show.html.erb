@@ -1,0 +1,14 @@
+<h2><%= @toque.dia_semana %> <%= @toque.dia %> a las <%= @toque.hora %></h2>
+<h1><%= @toque.nombre %></h1>
+<p><%= @toque.notas %></p>
+<p>
+	<b>D&oacute;nde:</b> <%if @toque.locacion.nil?%>TBA<%else%><%= @toque.donde_full%><%end%><br/>
+	<b>Cu&aacute;nto:</b> A: $<%= @toque.precio_anticipada %> / P: $<%= @toque.precio_puerta %>
+</p>
+<% unless @toque.flyer.nil? then %><%= link_to image_tag(url_for_file_column('toque',:flyer)), url_for_file_column("toque", "flyer"), :class=>'flyer', :target=>'_blank', :border=>0 %><% end %>
+
+<br/>
+
+<% if logged_in? %>
+	<%= link_content_to 'Editar', edit_toque_path(@toque) %>
+<%end%>

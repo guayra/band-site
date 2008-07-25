@@ -1,0 +1,7 @@
+<% form_for(@locacion) do |f| %>
+	<%= render :partial=>'form', :locals=>{ :f=>f }%>
+<% end %>
+
+<%= render :partial => 'tags' %>
+
+<%= link_to 'Edit', edit_locacion_path(@locacion) %>

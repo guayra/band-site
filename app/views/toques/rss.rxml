@@ -1,0 +1,19 @@
+xml.instruct! :xml, :version=>"1.0" 
+xml.rss(:version=>"2.0"){
+  xml.channel{
+    xml.title("Toques de Guayra")
+    xml.link("http://www.disfrutaguayra.com.ar/")
+    xml.description("Fechas de Guayra.")
+    xml.language('es-ar')
+      for toque in @toques
+        xml.item do
+          xml.title("#{toque.nombre} el #{toque.dia}")
+          xml.description(toque.notas)      
+          xml.author("Guayra")               
+          xml.pubDate(toque.created_at.strftime("%a, %d %b %Y %H:%M:%S %z"))
+          xml.link("http://www.disfrutaguayra.com.ar/toques/#{toque.id}")
+          xml.guid("http://www.disfrutaguayra.com.ar/toques/#{toque.id}")
+        end
+      end
+  }
+}

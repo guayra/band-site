@@ -1,0 +1,10 @@
+<h1>Editando: <%= @toque.nombre %></h1>
+
+<%= error_messages_for :toque %>
+
+<% form_for(@toque, :html=> {:multipart=>true}) do |f| %>
+	<%= render :partial => 'form', :locals=>{:f=>f} %>
+  <p>
+    <%= f.submit "Guardar" %>
+  </p>
+<% end %>

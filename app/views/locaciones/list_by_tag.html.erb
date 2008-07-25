@@ -1,0 +1,5 @@
+<h2>Locaciones con el tag: <%=h @tag%></h2>
+
+<% for l in @locaciones%>
+	<%= link_content_to h(l.nombre), l%> . 
+<%end%>

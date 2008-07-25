@@ -1,0 +1,15 @@
+<div id="tags_form">
+	<h3>Tags</h3>
+	<% if @locacion.tag_list.size == 0 then%>
+		No tiene tags
+	<%else%>
+		<% for tag in @locacion.tag_list%>
+			<%= tag %> . <%= link_to_remote 'eliminar', :update=>'tags_form', :url=>untag_locacion_path(@locacion, :tag=>tag)%><br/>
+		<% end%>
+	<%end%>
+	<% form_remote_tag :update=>'tags_form', :url=> tag_locacion_path(@locacion) do %>
+		<p><label for="tags">Agregar los siguientes tags</label><br/>
+		<input type="text" name="tags" size="30"/>Separar con comas<br/>
+		<%=  submit_tag "Agregar" %></p>
+	<% end %>
+</div>

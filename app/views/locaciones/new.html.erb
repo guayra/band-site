@@ -1,0 +1,13 @@
+<h1>Nueva locacion</h1>
+
+<%= error_messages_for :locacion %>
+
+<% form_for(@locacion) do |f| %>
+	<%= render :partial => 'form', :locals=>{:f=>f} %>
+	<p>
+		Tags: <input type="text" name="tags" size="65"/> separadas por comas. ','
+	</p>
+	<p>
+		<%= f.submit "Guardar" %>
+	</p>
+<% end %>

@@ -1,0 +1,8 @@
+<%= init_tinyMCE %>
+<p>Donde: <%= f.collection_select :locacion_id, Locacion.find(:all, :order=>"nombre ASC"), :id, :nombre, :prompt=>"Elegir locacion...", :allow_blank=>true %> <%= link_content_to 'agregar locacion', new_locacion_path%></p>
+<p>Cu&aacute;ndo: <%= f.datetime_select :cuando, :order=>[:day,:month,:year] %></p>
+<p>Cu&aacute;nto: anticipada<%= f.text_field :precio_anticipada, :size=>4 %>/puerta:<%= f.text_field :precio_puerta, :size=>4 %>
+<p>Nombre del evento: <%= f.text_field :nombre %></p>
+<p>Notas: <%= f.text_area :notas %></p>
+<p>Flyer: <%= file_column_field 'toque', :flyer %> poner en la portada: <%= f.check_box :portada %></p>
+<p>Notificado: <%= f.check_box :notificado %></p>

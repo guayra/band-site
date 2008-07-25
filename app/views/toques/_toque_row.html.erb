@@ -1,0 +1,16 @@
+		<tr class='<%= row_class %>'>
+			<td><%= toque.dia %></td>
+			<td>-</td>
+			<td><%= toque.nombre %></td>
+			<td>-</td>
+			<td><%= toque.donde %></td>
+			<td>-</td>
+			<td><%= link_content_to '+info', toque %></td>
+			<td>-</td>
+			<td><%= link_to( 'descargar flyer', url_for_file_column(toque,:flyer), :target=>'_blank' ) unless toque.flyer.nil?%></td>
+			<% if logged_in? %>
+				<td><% unless toque.notificado then %><%= link_content_to 'Notificar', notificar_toque_url(toque) %><%else%><%= link_to 'RE-notificar', notificar_toque_url(toque), :confirm=>'Este toque ya fue notificado. Renotificar?' %><%end%></td>
+				<td><%= link_content_to 'Editar', edit_toque_url(toque) %></td>
+				<td><%= link_to 'Eliminar', toque, :confirm => 'Seguro?', :method => :delete %></td>
+			<% end %>
+		</tr>

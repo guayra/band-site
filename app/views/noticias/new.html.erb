@@ -1,0 +1,10 @@
+<h1>Nueva noticia</h1>
+
+<%= error_messages_for :noticia %>
+
+<% form_for(@noticia, :html=> {:multipart=>true}) do |f| %>
+<%= render :partial => 'form', :locals=>{:f=>f} %>
+  <p>
+    <%= f.submit "Guardar" %>
+  </p>
+<% end %>

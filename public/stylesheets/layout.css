@@ -1,0 +1,33 @@
+div#menu{
+	margin: 0 auto 0 auto;
+}
+
+#header {
+	text-align:center;
+	top:0pt;
+}
+
+div#user_menu{
+	position:absolute;
+	text-align:right;
+	right:5px;
+	top:5px;
+}
+
+div#content{
+	margin: 0 auto 0 auto;
+	width: 700px;
+}
+
+div#loading{
+	margin: 0 auto 0 auto;
+	position:relative;
+	top: 80px;
+	text-align: center;
+}
+
+@media screen{
+	div#user_menu{
+		position:fixed;
+	}
+}

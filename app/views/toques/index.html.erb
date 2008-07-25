@@ -1,0 +1,15 @@
+<p align="right">
+	<%= link_to 'RSS', '/toques/rss' %>
+</p>
+
+<table align="center">
+	<tr><th colspan="9">-------------------------------------------------</th></tr>
+	<tr><th colspan="9">Toques</th></tr>
+	<% nro = 0%>
+	<% @toques.each do |toque| %>
+		<%= render :partial => "toque_row", :locals => { :toque =>toque, :row_class=>"row#{nro%2}"} %>
+		<%nro+=1%>
+	<%end%>
+	<tr><th colspan="9">-------------------------------------------------</th></tr>
+</table>
+

@@ -1,0 +1,11 @@
+<h2><%= noticia.titulo %></h2>
+<h3><%= noticia.created_at.strftime("%d.%b.%y %H:%Mhs")%></h3>
+<p><%= noticia.cuerpo %></p>
+<%unless noticia.image.nil? %><p>
+	<%= image_tag url_for_file_column(noticia, :image), :class=>'noticia_image'%>
+</p><%end%>
+
+<% if logged_in? %>
+	<%= link_content_to 'Editar', edit_noticia_path(noticia) %>
+	<%= link_to 'Eliminar', noticia, :confirm => 'Seguro?', :method => :delete %>
+<% end %>

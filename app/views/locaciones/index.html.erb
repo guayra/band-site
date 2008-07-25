@@ -1,0 +1,24 @@
+<h1>Locaciones</h1>
+
+<table>
+  <tr>
+  </tr>
+
+<% for locacion in @locaciones %>
+  <tr>
+  	<td><%= locacion.nombre %></td>
+    <td><%= link_content_to 'Detalles', locacion %></td>
+    <td><%= link_content_to 'Editar', edit_locacion_path(locacion) %></td>
+    <td><%= link_content_to 'Eliminar', locacion, :confirm => 'Seguro?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<p>
+<%= link_content_to 'Nueva locacion', new_locacion_path %>
+</p>
+
+<h3>Tags</h3>
+<% tag_cloud @tags, %w(css1 css2 css3 css4) do |tag, css_class| %>
+	<%= link_content_to h(tag.name), locaciones_tagged_path(tag.name) %> . 
+<% end %>

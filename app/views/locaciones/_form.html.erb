@@ -1,0 +1,21 @@
+<%= init_tinyMCE %>
+	<p><b>Nombre del lugar: </b><%= f.text_field :nombre %></p>
+	<h2>Contacto</h2>
+	<p>Persona: <%= f.text_field :persona_contacto %></p>
+	<p>Horario: <%= f.text_field :horario_contacto %></p>
+	<p>Tel: <%= f.text_field :telefono %></p>
+	<p>Mail: <%= f.text_field :mail %></p>
+	
+	<h2>Direccion</h2>
+	<p>Calle: <%= f.text_field :calle %></p>
+	<p>Numero: <%= f.text_field :numero %></p>
+	<p>Depto u otro: <%= f.text_field :depto %></p>
+	<p>Localidad o Barrio: <%= f.text_field :localidad %></p>
+	<p>Ciudad: <%= f.text_field :ciudad %></p>
+	<p>Pais: <%= f.text_field :pais %></p>
+	
+	<h2>Detalles</h2>
+	<p>Capacidad: <%= f.text_field :capacidad %></p>
+	<p>Precio: <%= f.text_field :precio %></p>
+	<p>Observaciones: <%= f.text_area :detalles %></p>
+	<p>Puntaje: <%= f.text_field :rate %></p>

@@ -1,0 +1,21 @@
+<p align="center">
+<% for toque_portada in @toques_portada %>
+	<%= image_tag url_for_file_column (toque_portada, :flyer), :width=>'60%' %>
+<% end %>
+</p>
+
+<table align="center">
+
+		<tr><th colspan="9">-------------------------------------------------</th></tr>
+		<tr><th colspan="9">Pr&oacute;ximas fechas</th></tr>
+	<% nro = 0%>
+	<% for toque in @proximos_toques %>
+		<%= render :partial => "toques/toque_row", :locals => { :toque =>toque, :row_class=>"row#{nro%2}"} %>
+		<%nro+=1%>
+	<%end%>
+	<tr><th colspan="9">-------------------------------------------------</th></tr>
+</table>
+
+<%unless @ultima_noticia.nil? %>
+	<%= render :partial=>'noticias/noticia', :locals=>{:noticia=>@ultima_noticia}%>
+<%end%>
